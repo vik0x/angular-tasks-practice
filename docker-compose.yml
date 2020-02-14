@@ -1,0 +1,34 @@
+version: '3.7'
+services:
+
+  # server:
+  #   image: nginx:alpine
+  #   container_name: nginx_server
+  #   restart: always
+  #   ports:
+  #     - "8080:80"
+  #   volumes:
+  #     - ./:/var/www
+  #     - ./nginx/conf.d/:/etc/nginx/conf.d/
+  #   networks:
+  #     - backend-net
+  
+  app:
+    build:
+      context: ./
+      dockerfile: front-application.dockerfile
+    container_name: front-application
+    tty: true
+    ports: 
+      - "4000:4000"
+    volumes:
+      - ./front:/var/www
+    networks:
+      - backend-net
+networks:
+  backend-net: 
+    driver: bridge
+  # angular:
+  #   image: ubuntu
+  #   ports:
+  #     - 3000:3000
