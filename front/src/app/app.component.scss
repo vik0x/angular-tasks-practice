@@ -1,0 +1,48 @@
+$font-size-title: 1.5rem;
+$task-title-size: 1.2rem;
+$list-padding: 15px;
+$header-margin: 15px 0px;
+$border-opacity: 0.2;
+$description-margin: 40px 0px 0px 0px;
+// Colors
+$border-color: rgba(0,0,0,$border-opacity);
+
+.list-wrapper {
+    display:flex;
+    flex-direction: column;
+}
+
+.list {
+    padding: $list-padding;
+}
+
+.list ~ .list {
+    border-top: 1px solid $border-color;
+} 
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: $header-margin;
+}
+
+.header > .buttons {
+    margin: auto 0px;
+}
+
+.header > .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $font-size-title;
+}
+
+.list-wrapper .header > .title {
+    font-size: $task-title-size;
+}
+
+.description {
+    text-align: justify;
+    margin: $description-margin;
+}
+
+

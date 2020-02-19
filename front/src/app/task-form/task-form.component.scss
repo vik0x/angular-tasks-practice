@@ -1,0 +1,15 @@
+$label-margin: 15px 0px 0px 0px;
+$input-height: 25px;
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form label {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: $label-margin;
+}
+.form input {
+    height: $input-height;
+    border-radius: 5px;
+}

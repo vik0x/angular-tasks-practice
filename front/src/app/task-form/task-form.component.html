@@ -1,0 +1,9 @@
+<form (submit)="createTask()" class="form">
+    <label for="title">title</label>
+    <input id="title" name="title" type="text" [(ngModel)]="title">
+
+    <label for="description">description</label>
+    <input id="description" name="description" type="text" [(ngModel)]="description">
+
+    <button class="btn btn-info" role="submit">Save</button>
+</form>

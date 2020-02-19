@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+$button-padding: 5px 20px;
+$button-margin: 0px 5px;
+$button-border-dadius: 5px;
+$button-default-color: rgb(206, 206, 206);
+$button-success-color: rgb(0, 160, 85);
+$button-info-color: rgb(119, 173, 235);
+.btn {
+    cursor: pointer;
+    border-radius: $button-border-dadius;
+    background-color: $button-default-color;
+    border: none;
+    color: white;
+    padding: $button-padding;
+    margin: $button-margin;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn.btn-success {
+    background-color: $button-success-color;
+}
+.btn.btn-info {
+    background-color: $button-info-color;
+}
